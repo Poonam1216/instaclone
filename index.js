@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const Post = require('./models/posts')
 const path = require("path")
+const port = 3008 || process.env.PORT
 const cors = require("cors")
 const fileUpload = require("express-fileupload")
 const url = `mongodb+srv://Manikanta:Manikanta@cluster0.sptxrlw.mongodb.net/?retryWrites=true&w=majority`
@@ -22,6 +23,7 @@ mongoose.connect(url, (err) => {
 app.get('/',(req,res)=>{
   try{
     res.send("Welcome")
+    res.send(`<h1> this is it </h1>`)
   }catch(e){
     res.json(e.message)
   }
