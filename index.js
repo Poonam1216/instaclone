@@ -3,11 +3,11 @@ const mongoose = require('mongoose')
 const Post = require('./models/posts')
 const path = require("path")
 const port = 3008 || process.env.PORT
-// const cors = require("cors")
+const cors = require("cors")
 const fileUpload = require("express-fileupload")
 const url = `mongodb+srv://Manikanta:Manikanta@cluster0.sptxrlw.mongodb.net/?retryWrites=true&w=majority`
 const app = express()
-// app.use(cors())
+app.use(cors())
 app.use(express.json())
 app.use(fileUpload())
 
