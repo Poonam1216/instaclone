@@ -8,6 +8,8 @@ const fileUpload = require("express-fileupload")
 const url = `mongodb+srv://Manikanta:Manikanta@cluster0.sptxrlw.mongodb.net/?retryWrites=true&w=majority`
 const app = express()
 app.use(cors())
+
+//cors
 app.use(express.json())
 app.use(fileUpload())
 
